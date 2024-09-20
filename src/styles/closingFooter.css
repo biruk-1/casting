@@ -1,0 +1,38 @@
+/* Footer Styles */
+.ls {
+    background-color: #f8f9fa; /* Light gray background */
+    height: 70px; /* Fixed height */
+    width: 100%; /* Full width */
+    color: #333; /* Dark gray text color */
+    border-top: 1px solid #e7e7e7; /* Subtle top border */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center vertically */
+    justify-content: center; 
+    margin-left: -1%;/* Center horizontally */
+  }
+  
+  .darklinks {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .darklinks a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+  }
+  
+  .darklinks a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .highlight {
+    color: #e63946; /* Heart icon color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .darklinks {
+      font-size: 12px; /* Slightly smaller text on mobile */
+    }
+  }
+  

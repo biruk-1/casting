@@ -1,0 +1,46 @@
+/* Carousel Content */
+.carousel-content {
+    display: flex; /* Align images horizontally */
+    width: calc(100% - 80px); /* Full width minus space for buttons (40px each) */
+    margin: 0 10px;
+  }
+  
+  /* Individual Carousel Image */
+  .carousel-image {
+    flex: 1 0 24%; /* Take up 24% of the carousel width per image */
+    position: relative;
+    overflow: hidden; /* Hide overflow for sliding details */
+  }
+  
+  /* Item Content Styling */
+  .item-content {
+    position: absolute;
+    bottom: 0;
+    left: 100%; /* Start from the right edge (outside view) */
+    width: 100%; /* Full width of the image */
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    color: #fd61e3;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 5;
+    transition: left 0.3s ease-in-out; /* Smooth transition for sliding in */
+  }
+  
+  /* Show details on hover */
+  .carousel-image:hover .item-content {
+    left: 0; /* Slide in from the right edge */
+  }
+  
+  /* Brighten half of the image on hover */
+  .carousel-image:hover img {
+    filter: brightness(1.5);
+  }
+  
+  /* Image Styling */
+  .carousel-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  

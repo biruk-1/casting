@@ -1,0 +1,143 @@
+.page_header {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100px; /* Start with full height */
+    padding: 0 20px;
+    transition: height 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Ensure margin-bottom for other content */
+}
+
+/* Shrinking the lower part of the header */
+.page_header.shrink {
+    height: 70px; /* Reduced height on scroll */
+    padding-bottom: 0; /* Reduce padding to shrink from the bottom */
+}
+
+/* Flex container for the content within the header */
+.page_header .container-fluid {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.page_header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.page_header .logo h1 {
+    font-size: 30px; /* Default font size */
+    margin: 0;
+    color: #ffffff;
+    transition: font-size 0.3s ease;
+}
+
+/* Shrink logo text size */
+.page_header.shrink .logo h1 {
+    font-size: 24px; /* Maintain a readable size on shrink */
+}
+
+/* Main menu styling */
+.mainmenu_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.mainmenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.mainmenu > li {
+    position: relative;
+}
+
+.mainmenu > li > a {
+    color: #ffffff;
+    padding: 0 15px;
+    text-decoration: none;
+    display: block;
+    line-height: 100px; /* Match the header height initially */
+    transition: line-height 0.3s ease;
+}
+
+.page_header.shrink .mainmenu > li > a {
+    line-height: 70px; /* Adjust line height for smaller header */
+}
+
+/* Dropdown menu */
+.mainmenu > li > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Background color for dropdown */
+    display: none;
+    z-index: 1001; /* Ensure dropdown appears above other content */
+    padding: 10px;
+}
+
+.mainmenu > li:hover > ul {
+    display: block;
+}
+
+.mainmenu > li > ul > li {
+    padding: 10px 15px;
+}
+
+.mainmenu > li > ul > li > a {
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.mainmenu > li > ul > li > a:hover {
+    color: #fd61e3; /* Highlight color on hover */
+}
+
+/* Contact section styling */
+.header-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.header-contacts .highlight {
+    font-size: 18px; /* Default font size */
+    font-weight: bold;
+}
+
+/* Shrink contact section text */
+.page_header.shrink .header-contacts .highlight {
+    font-size: 14px; /* Smaller size for shrunk header */
+}
+
+.header-contacts .fontsize_20 {
+    font-size: 14px;
+    color: #c0c0c0;
+    margin-top: 5px;
+}
+
+/* Adjust font size when header shrinks */
+.page_header.shrink .header-contacts .fontsize_20 {
+    font-size: 12px;
+}

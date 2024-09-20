@@ -1,0 +1,138 @@
+/* General Section Styles */
+.intro_section {
+    padding: 50px 0;
+    background-color: #f7f7f7;
+    position: relative;
+    overflow: hidden; /* Hide overflow to prevent unwanted scrollbars */
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Slide Styles */
+.slide {
+    display: flex;
+    height: 100%;
+    align-items: center; /* Center content vertically */
+}
+
+/* Slide Content Styles */
+.slide-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    align-items: center; /* Center content vertically */
+}
+
+/* Slide Image Styles */
+.slide-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Optional: add a background color */
+}
+
+.slide-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Slide Text Styles */
+.slide-text {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+/* Slide Description Styles */
+.slide_description h2.big {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fd61e3;
+}
+
+.slide_description h2.muellerhoff {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #fd61e3;
+}
+
+.entry-excerpt {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #e1e1e1;
+}
+
+/* Media Object Styles */
+.media {
+    display: flex;
+    align-items: flex-start;
+}
+
+.media-left {
+    margin-right: 15px;
+}
+
+.service-media {
+    width: 60px;
+    height: 60px;
+    background-color: #fd61e3;
+    border-radius: 50%;
+}
+
+.media-body h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.media-body p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e1e1e1;
+}
+
+/* Button Styles */
+.theme_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fd61e3;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.theme_button:hover {
+    background-color: #e14cb0;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .slide_description_wrapper {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .slide_description h2.big {
+        font-size: 36px;
+    }
+
+    .slide_description h2.muellerhoff {
+        font-size: 20px;
+    }
+}

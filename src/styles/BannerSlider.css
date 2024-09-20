@@ -1,0 +1,77 @@
+/* Styles for the overall container to center the banner */
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+  }
+  
+  /* Set the banner slider to 60% width */
+  .banner-slider {
+    width: 60%;
+    position: relative;
+    margin: 20px 20% auto 20%;
+    background-color: black;
+  }
+  
+  /* Ensure the images take the full width of the slider */
+  .banner-slider img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Style for the arrows on the left and right */
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    border: none; /* Remove any default border */
+  }
+  
+  /* Position the left arrow */
+  .slick-prev {
+    left: -20%;
+  }
+  
+  /* Position the right arrow */
+  .slick-next {
+    right: -20%;
+  }
+  
+  /* Optional: Style the overlay background for gradient effect, with less opacity for visibility */
+  .gradient_bg_goriz .bg_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    z-index: 1;
+  }
+  
+  /* Style for the media links (the clickable area) */
+  .media-links .abs-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    text-indent: -9999px; /* Hide text */
+    cursor: pointer;
+  }
+/* Target the specific div with both the 'row' and 'topmargin_70' classes */
+.row.topmargin_70 {
+    background-color: black;
+  }
+    

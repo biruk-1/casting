@@ -1,0 +1,106 @@
+/* Container for the carousel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Wrapper for carousel items */
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Individual carousel items */
+  .carousel-item {
+    min-width: 33.333%;
+    position: relative;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Image styles within carousel items */
+  .carousel-item img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Reduce opacity of image on hover */
+  .carousel-item:hover img {
+    opacity: 0.3;
+  }
+  
+  /* Details section on hover */
+  .details {
+    position: absolute;
+    top: 0;
+    left: -30%;
+    width: 30%;
+    height: 100%;
+    background-color: #ffb6c1; /* Light pink background */
+    transition: left 0.5s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  /* Move details into view on hover */
+  .carousel-item:hover .details {
+    left: 0;
+  }
+  
+  /* Text color within details */
+  .details h2, .details p {
+    color: #000;
+  }
+  
+  /* Remove margin from paragraph */
+  .details p {
+    margin: 0;
+  }
+  
+  /* Overlay for additional content */
+  .item-media .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+  }
+  
+  /* Show overlay on image hover */
+  .item-media:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* Pagination controls */
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .prev, .next {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .page-number {
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  

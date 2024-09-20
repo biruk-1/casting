@@ -1,0 +1,123 @@
+/* Background Color and General Styles */
+.footer {
+    padding: 70px 0;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text color for contrast */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply Animation */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content > div {
+    flex: 1;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Sequential Animation */
+.footer-content > .footer-logo {
+    animation-delay: 0.2s; /* Delay for the logo section */
+}
+
+.footer-content > .footer-links {
+    animation-delay: 0.4s; /* Delay for the links section */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content > .footer-banner {
+    animation-delay: 0.6s; /* Delay for the banner section */
+}
+
+/* Specific Styles */
+.footer-logo h1 {
+    font-size: 24px;
+}
+
+.footer-logo img {
+    max-width: 100%;
+}
+
+.payment-icons {
+    margin-top: 10px;
+}
+
+.payment-icons i {
+    margin-right: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-links ol {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    color: #fd61e3; /* Pink text color */
+    font-size: 14px; /* Smaller font size */
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fd61e3; /* Pink text color */
+}
+
+.footer-links li a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.footer-banner {
+    position: relative;
+}
+
+.footer-banner img {
+    max-width: 100%;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff; /* White text for banner text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}

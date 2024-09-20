@@ -1,0 +1,327 @@
+.preloader {
+    display: none; /* Hide preloader by default */
+  }
+  
+  .preloader_image {
+    /* background: url('/path-to-your-preloader-image.gif') no-repeat center center; */
+    width: 100px;
+    height: 100px;
+    align-items: center;
+  }
+  
+  .page_topline {
+    background-color: #242323;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    
+    align-items: center;
+  }
+  .page_topline .container-fluid{
+    align-items: center;
+    height: 50px;
+  }
+  
+  .topline_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .topline_left,
+  .topline_center,
+  .topline_right {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .page_social_icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page_social_icons a {
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .cart_dropdown,
+  .login_dropdown {
+    position: relative;
+  }
+  
+  .total-quantity {
+    font-size: 14px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 250px;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  .cart_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .cart_item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .cart_item h4 {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .cart_item .remove {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  .buttons {
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  .theme_button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .theme_button.inverse {
+    background-color: #f8f8f8;
+    color: #007bff;
+  }
+  
+  .search_button {
+    position: relative;
+  }
+  
+  .search_modal_button {
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  /* Additional styles to handle dropdown functionality */
+  .cart_dropdown:hover .dropdown-menu,
+  .login_dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  /* General Styles */
+.ds {
+    color: #fff;
+    background-color: #0d0d0d;
+}
+
+.cs {
+    color: #fff;
+    background-color: #e0006c;
+}
+
+a,
+a:hover,
+.cs a,
+.cs a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.topline-button {
+    font-size: 16px;
+    color: #818181;
+    padding: 0 12px;
+    line-height: 40px;
+}
+
+a.topline-button:hover {
+    color: #fff;
+    background-color: #e0006c;
+}
+
+.page_topline {
+    z-index: 1001;
+    position: relative;
+}
+
+.header_white {
+    color: #818181;
+    background-color: #f2f2f2;
+}
+
+.header_darkgrey {
+    background-color: #0d0d0d;
+    color: #fff !important;
+}
+
+.header_darkgrey h1 {
+    color: #fff;
+}
+
+.page_social_icons a.social-icon + a.social-icon {
+    margin-left: 22px;
+}
+
+/* Pagination Styles */
+.ds .pagination > li > a,
+.ds .pagination > li > span,
+.cs .pagination > li > a,
+.cs .pagination > li > span {
+    border-color: #fff;
+    color: #fff;
+}
+
+.ds .pagination > .active > a,
+.ds .pagination > .active > span,
+.ds .pagination > li > a:hover,
+.ds .pagination > li > span:hover,
+.ds .pagination > li > a:focus,
+.ds .pagination > li > span:focus {
+    background-color: #e0006c;
+    border-color: transparent;
+    color: #fff;
+}
+
+/* Thumbnail & Caption */
+.ds .thumbnail {
+    background-color: transparent;
+}
+
+.ds .thumbnail h3 a {
+    color: #fff;
+}
+
+.ds .thumbnail .caption {
+    background-color: #0a0a0a;
+    border-color: transparent;
+}
+
+/* Vertical Tabs */
+.ds .vertical-tabs .nav > li > a {
+    background-color: #0d0d0d;
+}
+
+.ds .vertical-tabs .nav > li.active > a,
+.ds .vertical-tabs .nav > li > a:hover {
+    background-color: #e0006c;
+}
+
+/* Dropdown Menu */
+.ds .dropdown-menu {
+    background-color: #1a1a1a;
+}
+
+/* Flexslider Banner */
+.ds .flexslider.banner-slider {
+    background-color: #0d0d0d;
+}
+
+.ds .flex-direction-nav a:before {
+    color: #fff;
+}
+
+/* Widget Styles */
+.cs .widget_recent_entries li + li,
+.cs .widget_recent_comments li + li,
+.cs .widget_archive li + li,
+.cs .widget_categories li + li,
+.cs .widget_meta li + li,
+.cs .widget_popular_entries li + li,
+.cs .widget_nav_menu li + li,
+.cs .widget_pages li + li {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Appointment Calendar */
+.ds .week-days {
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+.ds .day-cell.selected-day {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+/* Miscellaneous */
+.ds .progress {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .panel-body,
+.ds .appointment-list,
+.cs .with_background {
+    background-color: #0d0d0d;
+}
+
+.cs .with_border {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .appointment-list li {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.cs.blockquote {
+    border-color: #ff1485;
+}
+
+.cs .theme_buttons a.color1,
+.cs .theme_button.color1 {
+    background-color: #fff !important;
+    border-color: #fff !important;
+    color: #1a1a1a;
+}
+
+.cs .theme_buttons a.color1:hover,
+.cs .theme_button.color1:hover {
+    color: #e0006c !important;
+}
+
+/* Response & Highlight */
+.cs .response,
+.cs .highlight {
+    color: #fff;
+}
+
+.cs .greylinks a {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.cs .greylinks a:hover {
+    opacity: 1;
+    color: #fff !important;
+}
+
+.cs .black,
+.cs .grey {
+    color: #fff;
+    border-color: #fff;
+}
+
+.cs .dropdown+.dropdown:before {
+    background-color: rgba(255, 255, 255, 0.1);
+}
