@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../styles/MyCarousel.css'; // Ensure this path is correct
 
 const MyCarousel = ({ images }) => {
@@ -8,25 +9,28 @@ const MyCarousel = ({ images }) => {
         {images.map((image, index) => (
           <div key={index} className="carousel-item carousel-image">
             <div className="item-media">
-              <img src={image.src} alt={image.alt} />
+              {/* Wrap the image and other content in a Link */}
+              <Link to={`/models-detail/${index}`} aria-label={`View details for ${image.name}`}>
+                <img src={image.src} alt={image.alt} />
+              </Link>
               <div className="media-links">
-                <a
+                <Link
                   className="abs-link"
-                  href={image.link}
+                  to={`/models-detail/${index}`}
                   aria-label={`View details for ${image.name}`}
                 >
-                  {/* Content for screen readers */}
+                  {/* Accessible content */}
                   <span className="sr-only">View details for {image.name}</span>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="item-content">
               <div className="bg-overlay" />
               <div className="model-parameters">
                 <h2 className="block-header">
-                  <span className="highlight">
+                  <Link to={`/models-detail/${index}`} className="highlight">
                     {image.name}
-                  </span>
+                  </Link>
                 </h2>
                 <div>
                   <span className="bold">Height</span>

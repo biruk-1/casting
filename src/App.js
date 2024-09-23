@@ -1,10 +1,10 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import React Router components
 import './styles/main.css';
 import './styles/animations.css';
 import './styles/fonts.css';
 import './styles/bootstrap.min.css';
-// import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 import BlogTrial from './components/BlogTrial';
 import Header from './components/Header';
 import Preview from './components/Preview';
@@ -19,32 +19,40 @@ import Locations from './components/Locations';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
-// import MyCarousel from './components/carsoul';
 import ClosingFooter from './components/closingFooter';
+import ModelsDetail from './components/ModelsDetail';
 
 function App() {
   return (
-    <div style={{backgroundColor:"#222831"}} className="App">
-      {/* <Adds /> */}
-      <Header style = {{marginBottom:'20px'}}/>
-      < HomePage />
-      <Preview />
-      {/* <Testimony /> */}
-      <ModelList />
-      {/* <Services /> */}
-      <EmailUs />
-      <Details />
-      {/* <BlogPost /> */}
-      <BlogTrial/>
-      {/* <Locations /> */}
-      {/* <Contact /> */}
-      {/* <MyCarousel /> */}
-      {/* <BlogTrial/> */}
-      <Footer />
-      <ClosingFooter />
-    </div>
+    <Router>
+      <div style={{ backgroundColor: "#222831" }} className="App">
+        <Header style={{ marginBottom: '20px' }} />
+        <Routes>
+          {/* Default Route to show all components */}
+          <Route path="/" element={
+            <>
+              <HomePage />
+              <Preview />
+              <ModelList />
+              <EmailUs />
+              <Details />
+              <BlogTrial />
+              <Footer />
+              <ClosingFooter />
+            </>
+          } />
+          {/* Define routes for each component */}
+          <Route path="/models-detail/:id" element={<ModelsDetail />} />
+          <Route path="/blog" element={<BlogTrial />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/email-us" element={<EmailUs />} />
+          <Route path="/locations" element={<Locations />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
-
