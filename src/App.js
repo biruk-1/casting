@@ -21,6 +21,8 @@ import Footer from './components/Footer';
 import HomePage from './components/HomePage';
 import ClosingFooter from './components/closingFooter';
 import ModelsDetail from './components/ModelsDetail';
+import ModelPage from './components/ModelPage';
+import FilteredModels from './components/FilteredModels';
 
 function App() {
   return (
@@ -37,8 +39,8 @@ function App() {
               <EmailUs />
               <Details />
               <BlogTrial />
-              <Footer />
-              <ClosingFooter />
+              <ModelPage />
+             
             </>
           } />
           {/* Define routes for each component */}
@@ -48,8 +50,11 @@ function App() {
           <Route path="/email-us" element={<EmailUs />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/filtered-models" element ={<FilteredModels />} />
           {/* Add more routes as needed */}
         </Routes>
+        <Footer />
+        <ClosingFooter />
       </div>
     </Router>
   );

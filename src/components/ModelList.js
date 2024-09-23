@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/ModelList.css';
 
+
 const images = [
   { id: 1, src: 'images/models_portrait/13.jpg', name: 'Samantha Hawk', category: 'fashion' },
   { id: 2, src: 'images/models_portrait/14.jpg', name: 'Lana Anderson', category: 'studio' },

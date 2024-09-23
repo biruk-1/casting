@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #007bff;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Search */
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget_search {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.model-detail {
+    flex: 0 0 48%;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.model-image {
+    width: 100%;
+    height: auto;
+}
+
+.model-info {
+    padding: 15px;
+}
+
+.model-info h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.model-info p {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Social Media Icons */
+.page_social_icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page_social_icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #343a40;
+    transition: color 0.3s;
+}
+
+.page_social_icons a:hover {
+    color: #007bff;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .model-detail {
+        flex: 0 0 100%;
+    }
+}
