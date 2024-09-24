@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Header.css';
+import {Link} from  'react-router-dom';
 
 const Header = () => {
     const [isShrunk, setIsShrunk] = useState(false);
@@ -39,7 +40,9 @@ const Header = () => {
                     <nav className="mainmenu_wrapper">
                         <ul className="mainmenu nav sf-menu">
                             <li className="active">
+                                <Link to={'./'}>
                                 <a href="index.html">Home</a>
+                                </Link>
                                 <ul>
                                     <li><a href="index.html">Beauty</a></li>
                                     <li><a href="index2.html">Models</a></li>
@@ -48,14 +51,27 @@ const Header = () => {
                             <li>
                                 <a href="about.html">Pages</a>
                                 <ul>
-                                    <li><a href="shortcodes_teasers.html">Shortcodes & Widgets</a></li>
-                                    <li><a href="blog-right.html">Blog</a></li>
-                                    <li><a href="gallery-regular.html">Gallery</a></li>
-                                    <li><a href="header1.html">Headers</a></li>
-                                    <li><a href="breadcrumbs1.html">Breadcrumbs</a></li>
-                                    <li><a href="footer1.html">Footer</a></li>
+                                    <Link to = {'./'}>
+                                    <li> <a> Home </a> </li>
+                                    </Link>
+                                    <Link to = {'./preview'}>
+                                    <li><a href="blog-right.html">Preview</a></li>
+                                    </Link>
+                                    <Link to = {'./model-List'}>
+                                    <li><a href="gallery-regular.html">ModelList</a></li>
+                                    </Link>
+                                    <Link to = {'./EmailUs'}>
+                                    <li><a href="header1.html">EmailUs</a></li>
+                                    </Link>
+                                    <Link to = {'./Details'}>
+                                    <li><a href="breadcrumbs1.html">Details</a></li>
+                                    </Link>
+                                    <Link to = {'./blog'}>
+                                    <li><a href="footer1.html">Blogs</a></li>
+                                    </Link>
+                                    <Link to = {'./copyright'}>
                                     <li><a href="copyright1.html">Copyright</a></li>
-                                    <li><a href="events-left.html">Events</a></li>
+                                    </Link>
                                 </ul>
                             </li>
                             <li>

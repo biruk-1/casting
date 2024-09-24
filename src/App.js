@@ -27,8 +27,8 @@ import FilteredModels from './components/FilteredModels';
 function App() {
   return (
     <Router>
-      <div style={{ backgroundColor: "#222831" }} className="App">
-        <Header style={{ marginBottom: '20px' }} />
+      <div style={{ backgroundColor: "#222831" }} className="App" >
+        <Header style={{ marginBottom: '120px' }} />
         <Routes>
           {/* Default Route to show all components */}
           <Route path="/" element={
@@ -51,6 +51,12 @@ function App() {
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/filtered-models" element ={<FilteredModels />} />
+          <Route path="/preview" element={<Preview/>} />
+          <Route path="/model-List" element={ <ModelList />} />
+          <Route path="/EmailUs" element={<EmailUs />} />
+         
+          <Route path="/copyright" element={<ClosingFooter />} />
+            
           {/* Add more routes as needed */}
         </Routes>
         <Footer />

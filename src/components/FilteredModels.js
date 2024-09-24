@@ -29,7 +29,7 @@ const FilteredModels = () => {
     }, [models, filters]);
 
     return (
-        <section style={{ margin: '10px 20px 10px 20px' }} className="filtered-models">
+        <section style={{ margin: '100px 20px 10px 20px' }} className="filtered-models">
             {filteredModels.length > 0 ? (
                 <MyCarousel images={filteredModels.map(model => ({
                     src: model.src,
