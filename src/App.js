@@ -23,6 +23,8 @@ import ClosingFooter from './components/closingFooter';
 import ModelsDetail from './components/ModelsDetail';
 import ModelPage from './components/ModelPage';
 import FilteredModels from './components/FilteredModels';
+import UserStatusPage from './components/StatusPage';
+import UserProfile from './components/UserProfile';
 
 function App() {
   return (
@@ -39,7 +41,8 @@ function App() {
               <EmailUs />
               <Details />
               <BlogTrial />
-              <ModelPage />
+              <UserStatusPage />
+              {/* <ModelPage /> */}
              
             </>
           } />
@@ -56,7 +59,8 @@ function App() {
           <Route path="/EmailUs" element={<EmailUs />} />
          
           <Route path="/copyright" element={<ClosingFooter />} />
-            
+          <Route path = "/profile" element={<UserProfile />} />
+          <Route path = "/user-status" element={< UserStatusPage />} />
           {/* Add more routes as needed */}
         </Routes>
         <Footer />

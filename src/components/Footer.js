@@ -49,7 +49,7 @@ const Footer = () => {
                     <div className="footer-banner">
                         <div className="vertical-item content-absolute ds">
                             <div className="item-media">
-                                <img src="images/models_square/01.jpg" alt="Model" />
+                                <img src="/images/models_square/01.jpg" alt="Model" />
                             </div>
                             <div className="item-content">
                                 <span className="main_bg_color">New</span>

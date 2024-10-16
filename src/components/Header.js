@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Header.css';
 import {Link} from  'react-router-dom';
-
+import { BsPersonCircle } from 'react-icons/bs';
+import  DropdownMenu from './UserProfile'
+ 
 const Header = () => {
     const [isShrunk, setIsShrunk] = useState(false);
 
@@ -43,10 +45,7 @@ const Header = () => {
                                 <Link to={'./'}>
                                 <a href="index.html">Home</a>
                                 </Link>
-                                <ul>
-                                    <li><a href="index.html">Beauty</a></li>
-                                    <li><a href="index2.html">Models</a></li>
-                                </ul>
+                                
                             </li>
                             <li>
                                 <a href="about.html">Pages</a>
@@ -75,24 +74,20 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li>
-                                <a href="models.html">Models</a>
+                                <a href="models.html">Catagories</a>
                                 <ul>
-                                    <li><a href="models.html">Models</a></li>
-                                    <li><a href="models2.html">Models 2</a></li>
-                                    <li><a href="model.html">Model Single</a></li>
+                                    <li><a href="models.html">Fashion Models Castings</a></li>
+                                    <li><a href="models2.html">Movies and Tv Castings</a></li>
+                                    <li><a href="model.html">Song Models Castings</a></li>
+                                    <li><a href="model.html">Comercial Castings</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="appointment.html">Appointment</a>
+                                <Link to = {'/user-status'}>
+                                <a href="userStats.html">myStats</a>
+                                </Link>
                             </li>
-                            <li>
-                                <a href="faq.html">FAQ</a>
-                                <ul>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                    <li><a href="faq2.html">FAQ 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
+                           
                         </ul>
                     </nav>
                     <span className="toggle_menu">
@@ -105,6 +100,13 @@ const Header = () => {
                     </div>
                     <div className="fontsize_20 grey topmargin_-5">24/7 free calls</div>
                 </div>
+                <div>   
+                
+                   <DropdownMenu />
+                
+
+                </div>
+                
             </div>
         </header>
     );
