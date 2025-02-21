@@ -1,20 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Main font */
 }
 
 /* Home container */
 .home-container {
     position: relative;
     height: 100vh;
-    background-image: url('../images/black.png');
+    background-image: url('../images/black.png'); /* Background image */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto; /* Adjusts the margin */
-    font-family: 'Dancing Script', cursive;
     padding: 0 20px; /* Add padding for mobile responsiveness */
 }
 
@@ -25,7 +26,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
     color: white;
     display: flex;
     flex-direction: column;
@@ -40,28 +41,29 @@ body {
     font-size: 4.5em;
     letter-spacing: 5px;
     margin-bottom: 15px; /* Adds a bit of breathing space */
-    color: #f7e8ff; /* Softer color for modern look */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
+    color: #ff6f91; /* Vivid pink */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Enhanced text shadow for depth */
+    font-family: 'Lobster', cursive; /* Fancy font for main heading */
 }
 
 /* Sub Heading */
 .sub-heading {
-    font-size: 1.5rem;
-    color: #f2f2f2;
+    font-size: 1.7rem;
+    color: #ffe156; /* Bright yellow for better visibility */
     max-width: 900px;
     line-height: 1.6;
     margin-bottom: 50px; /* Adds space between text and filters */
+    font-family: 'Poppins', sans-serif; /* Use a modern sans-serif for subheadings */
 }
 
 /* Main Filter */
 .mainFilter {
     padding: 30px;
     width: 100%;
-    max-width: 700px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     margin: 40px auto;
-    background-color: rgba(255, 255, 255, 0.05); /* Slight translucent background */
+    background-color: rgba(255, 255, 255, 0.15); /* Slight translucent background */
     text-align: center;
 }
 
@@ -80,8 +82,8 @@ body {
     font-size: 1.1rem;
     border: 2px solid #ff79c6; /* New pinkish-modern color */
     border-radius: 8px;
-    background-color: #1e1e2e; /* Dark background for a modern look */
-    color: #ffebf4; /* Soft light pink text */
+    background-color: #2b2b2b; /* Dark background for a modern look */
+    color: #f8f8f8; /* Soft white text */
     transition: all 0.3s ease;
 }
 
@@ -92,25 +94,27 @@ body {
     outline: none;
 }
 
-/* Adjust Button */
+/* Button Styling */
 button {
-    background-color: #f093fb;
+    background: linear-gradient(135deg, #ff6f91, #ff6fd8); /* Gradient button color */
     color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    border-radius: 30px;
+    padding: 14px 28px; /* Increased padding for larger buttons */
+    font-size: 1.2rem;
+    border-radius: 50px; /* Rounded button style */
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 button:hover {
-    background-color: #ff6fd8;
-    box-shadow: 0 8px 16px rgba(240, 147, 251, 0.4);
+    transform: translateY(-2px); /* Button lift on hover */
+    background: linear-gradient(135deg, #ff6fd8, #ff6f91); /* Reverse gradient on hover */
+    box-shadow: 0 8px 30px rgba(240, 147, 251, 0.4); /* Shadow on hover */
 }
 
 button:active {
-    transform: scale(0.98);
+    transform: scale(0.95); /* Button press effect */
 }
 
 /* Footer */
@@ -124,15 +128,17 @@ button:active {
     letter-spacing: 2px;
 }
 
+/* Social Icons */
 .social-icons i {
     margin: 0 10px;
-    font-size: 1.5em;
+    font-size: 1.8em; /* Increased icon size */
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
 }
 
 .social-icons i:hover {
-    color: #f093fb; /* Matches button color */
+    color: #ff6f91; /* Matches button color */
+    transform: scale(1.1); /* Slight scale on hover */
 }
 
 /* Media Queries for Responsiveness */
@@ -145,4 +151,30 @@ button:active {
     .filterOption select {
         width: 32%; /* Adjust width of select boxes for larger screens */
     }
+}
+
+/* Additional Styling */
+h2 {
+    font-family: 'Dancing Script', cursive; /* Stylish font for headings */
+    color: #ff6f91; /* Bright pink for headings */
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Space below headings */
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif; /* Use modern sans-serif for smaller headings */
+    color: #ffe156; /* Light yellow color for visibility */
+    font-size: 1.8rem;
+    margin-bottom: 15px; /* Space below smaller headings */
+}
+
+p {
+    font-family: 'Roboto', sans-serif; /* Use main font for paragraphs */
+    color: #f2f2f2; /* Light grey text */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Border Radius for Inputs and Buttons */
+input, button {
+    border-radius: 20px; /* Consistent border radius for inputs and buttons */
 }

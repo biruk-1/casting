@@ -1,25 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import '../styles/MyCarousel.css'; // Ensure this path is correct
+import { Link } from 'react-router-dom'; 
+import '../styles/MyCarousel.css'; 
 
 const MyCarousel = ({ images }) => {
   return (
     <div className="carousel-container">
       <div className="carousel-content">
         {images.map((image, index) => (
-          <div key={index} className="carousel-item carousel-image">
+          <div key={image.id} className="carousel-item carousel-image"> {/* Assume each model has a unique 'id' */}
             <div className="item-media">
-              {/* Wrap the image and other content in a Link */}
-              <Link to={`/models-detail/${index}`} aria-label={`View details for ${image.name}`}>
+              <Link to={`/models-detail/${image.id}`} aria-label={`View details for ${image.name}`}>
                 <img src={image.src} alt={image.alt} />
               </Link>
               <div className="media-links">
                 <Link
                   className="abs-link"
-                  to={`/models-detail/${index}`}
+                  to={`/models-detail/${image.id}`} 
                   aria-label={`View details for ${image.name}`}
                 >
-                  {/* Accessible content */}
                   <span className="sr-only">View details for {image.name}</span>
                 </Link>
               </div>
@@ -28,7 +26,7 @@ const MyCarousel = ({ images }) => {
               <div className="bg-overlay" />
               <div className="model-parameters">
                 <h2 className="block-header">
-                  <Link to={`/models-detail/${index}`} className="highlight">
+                  <Link to={`/models-detail/${image.id}`} className="highlight">
                     {image.name}
                   </Link>
                 </h2>

@@ -3,16 +3,16 @@ import ModelProfile from './ModelProfile';
 import AboutModel from './AboutModel';
 import GalleryFilter from './GalleryFilter';
 
-const ModelPage = () => {
+const ModelPage = ({ selectedImage, handleImageClick }) => {
   const modelData = {
-    imageSrc: 'images/models_square/17.jpg',
+    imageSrc: selectedImage, // Use selected image from parent component
     name: 'Whitney Seether',
     socialLinks: [
       { icon: 'soc-facebook', url: '#', title: 'Facebook' },
       { icon: 'soc-twitter', url: '#', title: 'Twitter' },
       { icon: 'soc-google', url: '#', title: 'Google' },
       { icon: 'soc-linkedin', url: '#', title: 'LinkedIn' },
-      { icon: 'soc-pinterest', url: '#', title: 'Pinterest' }
+      { icon: 'soc-pinterest', url: '#', title: 'Pinterest' },
     ],
     parameters: [
       { label: 'Height', value: '185' },
@@ -20,23 +20,23 @@ const ModelPage = () => {
       { label: 'Waist', value: '59' },
       { label: 'Hips', value: '87' },
       { label: 'Shoe', value: '39' },
-      { label: 'Eyes', value: 'blue' }
+      { label: 'Eyes', value: 'blue' },
     ],
     address: 'Jackson’s Street 567, San Diego, California, United States',
     phone: '8 (800) 456-2698',
-    email: 'example@example.com'
+    email: 'example@example.com',
   };
 
   const bio = [
     'At vero eos et accusam et justo duo dolores et ea rebum...',
-    'At accusam aliquyam diam diam dolore dolores duo eirmod eos...'
+    'At accusam aliquyam diam diam dolore dolores duo eirmod eos...',
   ];
 
   const filters = [
     { name: 'All', filter: '*', selected: true },
     { name: 'Tests', filter: '.tests', selected: false },
     { name: 'Editorials', filter: '.editorials', selected: false },
-    { name: 'Snaps', filter: '.snaps', selected: false }
+    { name: 'Snaps', filter: '.snaps', selected: false },
   ];
 
   const galleryItems = [
@@ -55,7 +55,7 @@ const ModelPage = () => {
         <div className="row">
           <ModelProfile {...modelData} />
           <AboutModel bio={bio} />
-          <GalleryFilter filters={filters} galleryItems={galleryItems} />
+          <GalleryFilter filters={filters} galleryItems={galleryItems} onImageClick={handleImageClick} />
         </div>
       </div>
     </section>
